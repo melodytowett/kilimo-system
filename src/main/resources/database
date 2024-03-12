@@ -1,0 +1,19 @@
+Students Table
+| students | CREATE TABLE `students` (
+  `id` bigint NOT NULL,
+  `student_admission` varchar(255) DEFAULT NULL,
+  `student_name` varchar(255) DEFAULT NULL,
+  `streams_id` bigint NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FKal921hh8g57eny0nknn6pq09f` (`streams_id`),
+  CONSTRAINT `FKal921hh8g57eny0nknn6pq09f` FOREIGN KEY (`streams_id`) REFERENCES `streams` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci |
++
+
+Streams Table
+
+| streams | CREATE TABLE `streams` (
+  `id` bigint NOT NULL,
+  `stream_name` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci |
